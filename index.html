@@ -3,31 +3,96 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>First HTML Doc</title>
-	<link href="CSS/site.css" type="text/css" rel="stylesheet">
+	<title>Parker's World</title>
+	<link href="C:\Users\chari\Documents\site.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
-	<ul>
-		<li><a href="https://xinyangmtsu.github.io/" target="_blank">Home</a></li>
-		<li><a href="https://xinyangmtsu.github.io/3080.html" target="_blank">CSCI 3080</a></li>
-		<li><a href="https://xinyangmtsu.github.io/4410.html" target=""_blank>CSCI 4410</a></li>
+	<!--this is the header-->
+	<ul class="head" id="section-header">
+		<li><a href="https://parkershank.github.io/pshanklinOnWeb/" target="_blank">Home</a></li>
+		<li><a href="https://xinyangmtsu.github.io/3080.html" target="_blank">About Me</a></li>
+		<li class="dropdown">
+			<a href="" class="dropbtn">My Projects</a>
+			<div class="dropdown-content">
+				<a href="">Medical Webpage</a>
+				<a href="">Code Helper</a>
+			</div>
+		</li>
 	</ul>
 
 	<!--begining of content-->
 
-	<!--banner below the header-->
-	<div class="center">
-		<h1>Welcome to my domain</h1>
-	</div>
-
 	<!--image divs that center it -->
 	<div class="container">
 		<div class="containerIMG">
-			<img src="https://mtsunews.com/wp-content/uploads/2022/07/MT-Tuition-Free-graphic-promo-web.jpg" alt= "MTSU Campus" >
+			<div class="foreground">
+				<div class="center">
+					<h1>MTSU</h1>
+				</div>
+			</div>
 		</div>
 	</div>
-	
-	<p>who up rn?</p>
+	<!--Paragraph section-->
+	<div>	
+		<h2 style="text-align: center;">Welcome</h2>
+		<p>Welcome to my webpage. My name is Parker and I am from the middle TN area. I love building things I can use such as webpages or physical objects. Currently I'm interested in development of apps and software. I recently made a game with a couple friends and found it to be super fun. We are going to start trying out game jams this summer!</p>
+	</div>
+	<!--section 2-->
+	<div>
+		<div>
+			<img src="..\Documents\Jose flight.jpg" alt="Jose Vega teaches patron how to fly slight simulator in the Makerspace">
+			<a href="https://mtsusidelines.com/2022/09/24/makerspace-highlights-tech-with-open-house/">MTSU Sidelines</a>
+		</div>
+		<div>
+			<h2>The Makerspace</h2>
+			<p><mark>The Makerspace</mark> is my job but also a really fun and integral place to me. I've worked there for over 2 years. I am a senior teamlead. Basically all day I get to build and create things. I focus on training my workers and creating stuff for them or patrons to use. This picture is of a close friend/coworker of mine Jose. He is teaching a patron how to fly on our <b>flight sim</b>!</p>
+		</div>
+	</div>
+	<!--section 3-->
+	<div>
+		<h2>Recent Movies</h2>
+		<ul>
+			<li class="list-item">Marty Surpreme</li>
+			<li class="list-item">Uncut Gems</li>
+			<li class="list-item">Iron Lung</li>
+			<li class="list-item">Anaconda</li>
+		</ul>
+		<h3>Favorite Movies</h3>
+		<ol>
+			<li class="list-item">Star Wars: Revenge of the Sith</li>
+			<li class="list-item">Ford V Ferrai</li>
+			<li class="list-item">The Social Network</li>
+			<li class="list-item">Blade Runner 2049</li>
+			<li class="list-item">Marty Supreme</li>
+		</ol>
+	</div>
+	<!--section 4-->
+	<div>
+		<table border="1">
+			<tr>
+				<th>Title</th>
+				<th>Reason</th>
+			</tr>
+			<tr>
+				<td>Minecraft</td>
+				<td>Its a timeless classic with endless replayablity</td>
+			</tr>
+			<tr>
+				<td>Cyberpunk 2077</td>
+				<td>A fantastic vision of future dystopia America</td>
+			</tr>
+			<tr>
+				<td>Terraria</td>
+				<td>Very fun game with friends lots of challenge</td>
+			</tr>
+		</table>
+	</div>
+	<!--section 5-->
+	<div>
+		<a href="https://www.w3schools.com/">W3 SCHOOLS!!</a>
+	</div>
+	<!--section 6-->
+	<a href="#section-header">^back to top^</a>
 </body>
 </html>
