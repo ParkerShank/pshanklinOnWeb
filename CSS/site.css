@@ -1,19 +1,19 @@
 
 
 .center{
-	background-color: grey;
+	height: fit-content;
 	text-align: center;
-	color: blue;
-	padding: 5px;
+	color: white;
+	padding: 2px;
+	text: bold;
 }
 
 .containerIMG{
-	width: 400px;
-	height: 400px;
-	text-align: center;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
+	background-image: url("https://mtsunews.com/wp-content/uploads/2022/07/MT-Tuition-Free-graphic-promo-web.jpg"); /* Set the background image */
+    background-repeat: no-repeat;            /* Prevent image repetition */
+    background-size: contain;                  /* Cover the entire page */
+    background-attachment: fixed;            /* Fix the image position during scroll */
+    background-color: #cccccc;
 	
 }
 .container{
@@ -25,13 +25,57 @@
 
 }
 
+.foreground{
+	width: 100vw;
+	height: 400px;
+}
+
+li a, .dropbtn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn{
+	background-color: black;
+}
+li.dropdown{
+	display: inline-block;
+}
+.dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: lightgrey;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content a{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.dropdown-content a:hover {
+	background-color:gray ;
+	color: white;
+}
+
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+h1{
+	font-size:50px;
+}
 body{
 	background-color: lightgrey;
 	margin: 0px;
 }
 
 
-ul {
+.head {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -53,4 +97,8 @@ li a {
 
 li a:hover {
 	background-color: #111;
+}
+
+.list-item {
+	float: none;
 }
