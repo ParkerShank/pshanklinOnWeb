@@ -1,33 +1,11 @@
-
-
-.center{
-	height: fit-content;
-	text-align: center;
-	color: white;
-	padding: 2px;
-	text: bold;
-}
-
-.containerIMG{
-	background-image: url("https://mtsunews.com/wp-content/uploads/2022/07/MT-Tuition-Free-graphic-promo-web.jpg"); /* Set the background image */
-    background-repeat: no-repeat;            /* Prevent image repetition */
-    background-size: contain;                  /* Cover the entire page */
-    background-attachment: fixed;            /* Fix the image position during scroll */
-    background-color: #cccccc;
-	
-}
-.container{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	justify-items: center;
-
-}
-
-.foreground{
-	width: 100vw;
-	height: 400px;
+.myImg{
+	max-width: 100vw; /* Force image to fill container horizontally */
+	height: 40vw;   /* Responsive height, adjust as needed */
+	min-height: 200px;
+	object-fit: cover; /* Scales the image to cover the container */
+	display: block;  /* Helps remove extra space below the image */
+	margin: 0; /* Centers the image horizontally */
+	border: red solid 5px;
 }
 
 li a, .dropbtn {
@@ -101,4 +79,25 @@ li a:hover {
 
 .list-item {
 	float: none;
+}
+
+.image-container {
+    position: relative; /* Position relative to contain absolutely positioned elements */
+    display: block; /* Make container full width */
+    width: 100vw;   /* Full viewport width */
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.overlay-text {
+    position: absolute; /* Position the text absolutely within the container */
+    top: 10%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    color: white; /* Text color */
+    font-size: 24px; /* Adjust font size as needed */
+    text-align: top; /* Center text */
+	font: bold 49px Arial, sans-serif; /* Set font style and size */
 }
