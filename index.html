@@ -9,17 +9,20 @@
 
 <body>
 	<!--this is the header-->
-	<ul class="head" id="section-header">
-		<li><a href="https://parkershank.github.io/pshanklinOnWeb/" target="_blank">Home</a></li>
-		<li><a href="Pages/cv.html" target="_blank">My CV</a></li>
-		<li class="dropdown">
-			<a href="" class="dropbtn">My Projects</a>
-			<div class="dropdown-content">
-				<a href="">Medical Webpage</a>
-				<a href="">Code Helper</a>
-			</div>
-		</li>
-	</ul>
+	<div style="display: flex;" class="headerR">
+		<ul class="head" id="section-header">
+			<li><a href="https://parkershank.github.io/pshanklinOnWeb/" target="_blank">Home</a></li>
+			<li><a href="Pages/cv.html" target="_blank">My CV</a></li>
+			<li class="dropdown">
+				<a href="" class="dropbtn">My Projects</a>
+				<div class="dropdown-content">
+					<a href="">Medical Webpage</a>
+					<a href="">Code Helper</a>
+				</div>
+			</li>
+		</ul>
+		<p style="font-weight: bold;">Parker Shanklin</p>
+	</div>
 
 	<!--begining of content-->
 	<!--image divs that center it -->
@@ -87,6 +90,11 @@
 		<a href="https://www.w3schools.com/">W3 SCHOOLS!!</a>
 	</div>
 	<!--section 6-->
-	<a href="#section-header">^back to top^</a>
+
+
+	<div style="display: flex; align-items: center; justify-content: space-between;" class="footer">
+		<p>Copyright 2024 Parker Shanklin</p>
+		<button onclick="window.location.href='#section-header';">^back to top^</button>
+	</div>
 </body>
 </html>
