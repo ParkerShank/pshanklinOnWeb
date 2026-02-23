@@ -1,0 +1,24 @@
+Home Page
+Have a set color scheme.
+Ensure all picture settings need to scale properly and fill the section.
+
+Header link to CV page and Add name to top right
+picture with text on top of it
+A welcome section that goes into a bit about me
+another picture with explaining my job
+then list out movies
+then a table of video games
+then a footer that goes back to the top
+
+CV Page
+Header same as index
+cover education experience and skills. in 3 columns
+then in one column projects
+then a footer and home director and head director on footer
+
+
+
+Reflection---
+I was able to get all content.
+The hardest part was getting the pictures to format for the size.
+I made a mistake in the CSS directory which made it not appear on GitHub.
