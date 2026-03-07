@@ -36,15 +36,16 @@ function scan() {
         }
         let cost = parseFloat(itemCost);
         if (isNaN(cost) || cost < 0) {
-            alert("Invalid cost entered for item " + (i + 1) + ". Please enter a valid positive number.");
-            i--; // Retry this item
+            alert("Invalid cost entered for item " + (i + 1) + ". Skipping this item.");
             continue;
         }
-        console.log(i)
         cashRegister.add(cost);
         let li = document.createElement("li");
         li.textContent = "Item " + (i + 1) + ": $" + cost.toFixed(2);
         ul.appendChild(li);
+        if (i == cashRegister.itemCount) {
+            break;
+        }
     }
 }
 
