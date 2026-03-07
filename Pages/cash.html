@@ -6,15 +6,26 @@
     <title>Cash</title>
     <link href="../CSS/cash.css" type="text/css" rel="stylesheet">
 </head>
-<body>
-    <label for="itemCount">Enter number of items:</label>
-    <input type="number" id="itemCount" min="1">
-    <button id="scan">Scan Items</button>
-    <button id="show">Show Total</button>
-    <button id="reset">Reset</button>
-    <ul id="itemList"></ul>
-    <h1 id="total">Total: $0.00</h1>
-    <p>v0.12</p>
+<body style="margin: 0px; padding: 0px;">
+    <h1>Cash Register</h1>
+    <div>
+        <label for="itemCount">Enter number of items:</label>
+        <input type="number" id="itemCount" min="1">
+        <button id="scan">Scan Items</button>
+    </div>
+    <div id="itemListContainer">
+        <ul id="itemList"></ul>
+    </div>
+    <div id="totalContainer">
+        <button id="show">Show Total</button>
+        <button id="reset">Reset</button>
+        <h1 id="total">Total: $0.00</h1>
+    </div>
+    
+    
+    
+    
+    <p>v0.14</p>
 
     <script src="../scripts/cash.js"></script>
 </body>
