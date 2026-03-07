@@ -26,9 +26,8 @@ function scan() {
         alert("Item count is too high. Please enter a number less than or equal to 100.");
         return;
     }
-    cashRegister.itemCount = itemCount;
     let ul = document.getElementById("itemList");
-    for (let i = 0; i < cashRegister.itemCount; i++) {
+    for (let i = 0; i < itemCount; i++) {
         let itemCost = prompt("Enter the cost of item " + (i + 1) + ":");
         if (itemCost === null) {
             alert("Scan cancelled.");
@@ -43,9 +42,6 @@ function scan() {
         let li = document.createElement("li");
         li.textContent = "Item " + (i + 1) + ": $" + cost.toFixed(2);
         ul.appendChild(li);
-        if (i == cashRegister.itemCount) {
-            break;
-        }
     }
 }
 
