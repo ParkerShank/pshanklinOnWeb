@@ -16,20 +16,35 @@ const cashRegister = {
 
 function scan() {
     let itemCountInput = document.getElementById("itemCount").value;
-    cashRegister.itemCount = parseInt(itemCountInput);
-    console.log(cashRegister.itemCount);
+    console.log("Value entered into item count input:", itemCountInput);
+    let itemCount = parseInt(itemCountInput);
+    if (isNaN(itemCount) || itemCount <= 0) {
+        alert("Please enter a valid positive number for the item count.");
+        return;
+    }
+    if (itemCount > 100) {
+        alert("Item count is too high. Please enter a number less than or equal to 100.");
+        return;
+    }
+    cashRegister.itemCount = itemCount;
     let ul = document.getElementById("itemList");
-    let scanButton = document.getElementById("scan");
-    scanButton.disabled = true; // Disable button during scanning
     for (let i = 0; i < cashRegister.itemCount; i++) {
         let itemCost = prompt("Enter the cost of item " + (i + 1) + ":");
-        if (itemCost === null) break; // Stop if user cancels
-        cashRegister.add(parseFloat(itemCost));
+        if (itemCost === null) {
+            alert("Scan cancelled.");
+            break;
+        }
+        let cost = parseFloat(itemCost);
+        if (isNaN(cost) || cost < 0) {
+            alert("Invalid cost entered for item " + (i + 1) + ". Please enter a valid positive number.");
+            i--; // Retry this item
+            continue;
+        }
+        cashRegister.add(cost);
         let li = document.createElement("li");
-        li.textContent = "Item " + (i + 1) + ": $" + itemCost;
+        li.textContent = "Item " + (i + 1) + ": $" + cost.toFixed(2);
         ul.appendChild(li);
     }
-    scanButton.disabled = false; // Re-enable button after scanning
 }
 
 function printTotal() {
