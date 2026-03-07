@@ -17,6 +17,7 @@ const cashRegister = {
 function scan() {
     let itemCountInput = document.getElementById("itemCount").value;
     cashRegister.itemCount = parseInt(itemCountInput);
+    console.log(cashRegister.itemCount);
     let ul = document.getElementById("itemList");
     for (let i = 0; i < cashRegister.itemCount; i++) {
         let itemCost = prompt("Enter the cost of item " + (i + 1) + ":");
