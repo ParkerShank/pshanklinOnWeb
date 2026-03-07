@@ -19,13 +19,17 @@ function scan() {
     cashRegister.itemCount = parseInt(itemCountInput);
     console.log(cashRegister.itemCount);
     let ul = document.getElementById("itemList");
+    let scanButton = document.getElementById("scan");
+    scanButton.disabled = true; // Disable button during scanning
     for (let i = 0; i < cashRegister.itemCount; i++) {
         let itemCost = prompt("Enter the cost of item " + (i + 1) + ":");
+        if (itemCost === null) break; // Stop if user cancels
         cashRegister.add(parseFloat(itemCost));
         let li = document.createElement("li");
         li.textContent = "Item " + (i + 1) + ": $" + itemCost;
         ul.appendChild(li);
     }
+    scanButton.disabled = false; // Re-enable button after scanning
 }
 
 function printTotal() {
