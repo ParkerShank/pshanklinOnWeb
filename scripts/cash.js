@@ -16,8 +16,8 @@ const cashRegister = {
 
 function scan() {
     let itemCountInput = document.getElementById("itemCount").value;
-    console.log("Value entered into item count input:", itemCountInput);
     let itemCount = parseInt(itemCountInput);
+
     if (isNaN(itemCount) || itemCount <= 0) {
         alert("Please enter a valid positive number for the item count.");
         return;
@@ -26,22 +26,29 @@ function scan() {
         alert("Item count is too high. Please enter a number less than or equal to 100.");
         return;
     }
+
     let ul = document.getElementById("itemList");
+
     for (let i = 0; i < itemCount; i++) {
-        let itemCost = prompt("Enter the cost of item " + (i + 1) + ":");
-        if (itemCost === null) {
-            alert("Scan cancelled.");
-            break;
+        let itemCost;
+
+        // Re-prompt until valid input or cancellation
+        while (true) {
+            itemCost = prompt(`Enter the cost of item ${i + 1}:`);
+            if (itemCost === null) {
+                alert("Scan cancelled.");
+                return; // Exit entirely on cancel
+            }
+            let cost = parseFloat(itemCost);
+            if (!isNaN(cost) && cost >= 0) {
+                cashRegister.add(cost);
+                let li = document.createElement("li");
+                li.textContent = `Item ${i + 1}: $${cost.toFixed(2)}`;
+                ul.appendChild(li);
+                break; // Valid input — move to next item
+            }
+            alert(`Invalid cost for item ${i + 1}. Please enter a valid number.`);
         }
-        let cost = parseFloat(itemCost);
-        if (isNaN(cost) || cost < 0) {
-            alert("Invalid cost entered for item " + (i + 1) + ". Skipping this item.");
-            continue;
-        }
-        cashRegister.add(cost);
-        let li = document.createElement("li");
-        li.textContent = "Item " + (i + 1) + ": $" + cost.toFixed(2);
-        ul.appendChild(li);
     }
 }
 
