@@ -40,6 +40,7 @@ function scan() {
             i--; // Retry this item
             continue;
         }
+        console.log(i)
         cashRegister.add(cost);
         let li = document.createElement("li");
         li.textContent = "Item " + (i + 1) + ": $" + cost.toFixed(2);
